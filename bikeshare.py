@@ -300,6 +300,8 @@ if __name__ == "__main__":
     
 
 """ 
+Note: The following links are also copied in a text file separately.
+
 Resources used in writing this project:
 
 For user input until validation passes:

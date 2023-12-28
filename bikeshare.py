@@ -110,7 +110,6 @@ def time_stats(df, city, month='All'):
     months = ['January', 'February', 'March', 'April', 'May', 'June']
     if month == 'All':
         df['month'] = df['Start Time'].dt.month
-#       mo_counts = df['month'].value_counts()
         max_mo_count = df['month'].value_counts().keys().tolist()
         popular_month = max_mo_count[0]
         print('The most popular month is: ', months[popular_month-1])
@@ -131,7 +130,6 @@ def time_stats(df, city, month='All'):
 
 # find the most common hour (from 0 to 23)
     df['hour'] = df['Start Time'].dt.hour
-#   hour_counts = df['hour'].value_counts()
     max_count = df['hour'].value_counts().keys().tolist()
     popular_hour = max_count[0]
     print('The most popular hour is: ', popular_hour)
@@ -270,11 +268,6 @@ def raw_data(df, city):
 def main():
     """ This is the main function to run the other functions """
     city, month, day = get_filters()
-# comment the line above to use 'canned' inputs; this is just to run testing without having to type each entry
-#   city = 'Chicago'
-#   month = 'All'
-#   day = 'All'
-
     df = load_data(city, month, day)
     time_stats(df, city, month)
     station_stats(df)

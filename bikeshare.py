@@ -8,7 +8,6 @@ Created on Thu Dec 14 07:43:49 2023
 
 import time
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
 
 CITY_DATA = { 'Chicago': 'D:/42_Amie Projects/Python/Udacity/all-project-files/chicago.csv',
